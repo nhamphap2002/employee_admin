@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Designed by Generate Script Tool
+Copyright (c) 2014 by Admin
+-->
+<extension type="component" version="2.5" method="upgrade">
+    <name>Tienluong</name>
+    <creationDate>2014</creationDate>
+    <author>FGC Techlution</author>
+    <authorEmail>contact@fgc.vn</authorEmail>
+    <authorUrl>http://fgc.vn</authorUrl>
+    <copyright>FGC Techlution</copyright>
+    <license>FGC Techlution</license>
+    <version>2.5</version>
+    <description>Component Tienluong</description>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder='site'>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>helpers</folder>
+            <folder>assets</folder>
+            <filename>tienluong.php</filename>
+    </files>
+    <administration>
+        <menu>Tienluong</menu>
+        <submenu>
+            <menu task="config.display" view="config.detail">Config</menu>
+            <menu task="employee.display" view="employee.list">Nhan vien</menu>
+            <menu task="nationality.display" view="nationality.list">Tinh thanh</menu>
+            <menu task="ethnic.display" view="ethnic.list">Dan toc</menu>
+            <menu task="religion.display" view="religion.list">Ton giao</menu>
+            <menu task="informatic.display" view="informatic.list">Trinh do</menu>
+            <menu task="professional.display" view="professional.list">Chuyen mon</menu>
+            <menu task="timeKeeper.display" view="timeKeeper.list">Ngay cong</menu>
+        </submenu>
+        <files folder='admin'>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>helpers</folder>
+            <folder>assets</folder>
+            <folder>mvc</folder>
+            <folder>tables</folder>
+            <folder>sql</folder>
+            <filename>tienluong.php</filename>
+            <filename>config.xml</filename>
+        </files>
+    </administration>
+    <languages folder='languages/admin'>
+         <language tag="en-GB">en-GB.com_tienluong.ini</language>
+         <language tag="en-GB">en-GB.com_tienluong.sys.ini</language>
+    </languages>
+    <languages folder='languages/site'>
+         <language tag="en-GB">en-GB.com_tienluong.ini</language>
+         <language tag="en-GB">en-GB.com_tienluong.sys.ini</language>
+    </languages>
+</extension>
